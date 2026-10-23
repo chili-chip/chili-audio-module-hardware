@@ -28,7 +28,20 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [],
+    "erc_exclusions": [
+      [
+        "pin_to_pin|1587500|1092200|689a2687-15a4-408f-a506-e864f2a52334|a03cb93b-f66b-418e-aa78-e2efe113779d|/9be85f05-9e69-472e-8d90-8a57f073ce5f|/9be85f05-9e69-472e-8d90-8a57f073ce5f|/9be85f05-9e69-472e-8d90-8a57f073ce5f",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1447800|736600|5b9e970a-b424-4f0d-aa58-45995221dfdf|00000000-0000-0000-0000-000000000000|/9be85f05-9e69-472e-8d90-8a57f073ce5f|/9be85f05-9e69-472e-8d90-8a57f073ce5f|",
+        ""
+      ],
+      [
+        "power_pin_not_driven|1562100|609600|e867f5f6-8a39-4bca-a2fa-585b582d2fd5|00000000-0000-0000-0000-000000000000|/9be85f05-9e69-472e-8d90-8a57f073ce5f|/9be85f05-9e69-472e-8d90-8a57f073ce5f|",
+        ""
+      ]
+    ],
     "meta": {
       "version": 0
     },
@@ -392,6 +405,12 @@
           "label": "Description",
           "name": "Description",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": true
         }
       ],
       "filter_string": "",

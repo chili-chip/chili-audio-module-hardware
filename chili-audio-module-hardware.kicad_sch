@@ -4,6 +4,13 @@
 	(generator_version "10.0")
 	(uuid "9be85f05-9e69-472e-8d90-8a57f073ce5f")
 	(paper "A4")
+	(title_block
+		(title "CHILICHIP AUDIO MODULE")
+		(date "2026-11-05")
+		(rev "v1.1.0")
+		(comment 3 "Company: chilichip")
+		(comment 4 "Author: Kacper Akdag-Ochnik")
+	)
 	(lib_symbols
 		(symbol "Audio:MAX98357A"
 			(exclude_from_sim no)
@@ -2345,9 +2352,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "77230936-b90c-48d1-b62c-934504cc1f75")
 		(property "Reference" "J1"
@@ -2370,7 +2377,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
+		(property "Footprint" "chili-audio-module:Castellated_1x04_P2.54mm"
 			(at 116.84 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -2430,9 +2437,9 @@
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
-		(in_pos_files yes)
+		(in_pos_files no)
 		(dnp no)
 		(uuid "84d3beb1-11c9-4aa7-ba78-c0a2bd5927d6")
 		(property "Reference" "J2"
@@ -2455,7 +2462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "chili-audio-module:Castellated_1x02_P2.54mm"
 			(at 106.68 68.58 0)
 			(hide yes)
 			(show_name no)

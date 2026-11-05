@@ -62,11 +62,41 @@ jobs:
           name: pcb-image
           path: ${{ env.OUT_PCB_IMG }}
 
+  # JLCPCB fab + assembly files (gerber/drill zip, BOM, CPL)
+  jlcpcb:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'release'
+    container:
+      image: kicad/kicad:10.0.7
+      options: --user root
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
+
+      - name: Install tools
+        run: apt-get update && apt-get install -y --no-install-recommends zip python3
+
+      - name: Export JLCPCB files
+        run: |
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            VERSION="${{ github.ref_name }}"
+          else
+            VERSION="$(echo "${{ github.sha }}" | cut -c1-7)"
+          fi
+          scripts/export-jlcpcb.sh "$VERSION" production
+
+      - name: Upload JLCPCB files
+        uses: actions/upload-artifact@v7
+        with:
+          name: jlcpcb
+          path: production/
+
   release:
     permissions: write-all
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
-    needs: kicad-ci
+    needs: [kicad-ci, jlcpcb]
 
     steps:
       - name: Checkout repository
@@ -85,6 +115,10 @@ jobs:
         with:
           name: gerbers
           path: artifacts/gerbers
+      - uses: actions/download-artifact@v8
+        with:
+          name: jlcpcb
+          path: artifacts/jlcpcb
 
       # Package Gerbers as zip and tar.gz
       - name: Package Gerbers
@@ -101,5 +135,6 @@ jobs:
             artifacts/pcb-image/pcb.png
             artifacts/gerbers.zip
             artifacts/gerbers.tar.gz
+            artifacts/jlcpcb/*
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

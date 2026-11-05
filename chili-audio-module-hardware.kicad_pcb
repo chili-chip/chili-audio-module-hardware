@@ -9,7 +9,7 @@
 	(paper "A4")
 	(title_block
 		(title "CHILICHIP AUDIO MODULE")
-		(rev "v1.1.0")
+		(rev "v1.1.1")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)
@@ -2497,19 +2497,19 @@
 		(effects
 			(font
 				(size 0.8 0.8)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
 	)
-	(gr_text "v1.1.0"
+	(gr_text "v1.1.1"
 		(at 133.85 93.2 270)
 		(layer "F.SilkS")
 		(uuid "7dd620a6-f793-4687-8175-4ac2a65baf92")
 		(effects
 			(font
 				(size 0.8 0.8)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom)
 		)
@@ -2593,7 +2593,7 @@
 		(effects
 			(font
 				(size 0.8 0.8)
-				(thickness 0.1)
+				(thickness 0.15)
 			)
 			(justify left bottom mirror)
 		)

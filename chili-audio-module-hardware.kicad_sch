@@ -7,7 +7,7 @@
 	(title_block
 		(title "CHILICHIP AUDIO MODULE")
 		(date "2026-11-05")
-		(rev "v1.1.0")
+		(rev "v1.1.1")
 		(comment 3 "Company: chilichip")
 		(comment 4 "Author: Kacper Akdag-Ochnik")
 	)

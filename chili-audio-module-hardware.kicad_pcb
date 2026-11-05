@@ -2587,7 +2587,7 @@
 		)
 	)
 	(gr_text "chili-audio-module"
-		(at 134.1 92.9 90)
+		(at 132.05 92.9 90)
 		(layer "B.SilkS")
 		(uuid "c90c16da-21e4-4fd4-8c9b-7c34bb8ccf0c")
 		(effects
